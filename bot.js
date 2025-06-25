@@ -31,3 +31,8 @@ bot.onText(/\/start/, async (msg) => {
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
+
+// Add this route to check if the bot is running
+app.get("/", (req, res) => {
+  res.send("Bot is running.");
+});
